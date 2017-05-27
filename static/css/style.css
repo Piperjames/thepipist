@@ -4,10 +4,10 @@
 }
 
 body {
-	background-image: url('../images/background2.jpg');
+	background-image: url('../images/background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top left;
+	background-position: center;
 	overflow: auto;
 }
 
@@ -84,13 +84,12 @@ nav ul li:hover {
 section {
 	display: block;
 	width: 80%;
-	height: 50em;
 	background: rgba(0,0,0,0.5);
 	margin: 10px auto;
 }
 
 article {
-	width: 80%;
+	width: 68%;
 	height: 50em;
 	background: rgba(0,0,0,0.5);
 	border: 1px solid white;
@@ -98,7 +97,7 @@ article {
 }
 
 aside {
-	width: 18%;
+	width: 30%;
 	height: 50em;
 	background: rgba(0,0,0,0.5);
 	border: 1px solid white;
@@ -123,6 +122,40 @@ footer {
 	line-height: 3em;
 }
 
-@media only screen and (min-width: 720px){
-
+@media only screen and (max-width: 720px){
+	header, nav, section, footer {
+		width: 98%;
+	}
+	header {
+		height: 5em;
+	}
+	nav ul li {
+		padding: 0;
+		margin: 0;
+	}
+	nav ul li:first-child {
+		border-left: none;
+	}
+	nav ul li:last-child {
+		border-right: none;
+	}
+	
+	nav ul li {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	article, aside {
+		width: 100%;
+		display: block;
+	}
+	article {
+		height: 20em;
+	}
+	aside {
+		height: 10em;
+		margin: 5px auto;
+	}
+	footer {
+		clear: right;
+	}
 }
